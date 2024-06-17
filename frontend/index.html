@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProcessManagementPersons</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="src/app.js" defer></script>
+</head>
+<body>
+    <div id="app">
+        <form id="app-formPhysicalPerson" @submit="submitForm">
+            <input type="text" v-model="FullName" placeholder="Digite o nome." title="Nome da pessoa física">
+            <input type="text" v-model="CPF" placeholder="Digite o CPF." title="CPF da pessoa física">
+            <input type="text" v-model="DateOfBirth" placeholder="Digite a data de nascimento 99/99/9999." title="Data de Nascimento">
+            <input type="text" v-model="Address" placeholder="Digite o endereço." title="Endereço">
+            <input type="text" v-model="Contact[0]" placeholder="Digite o telefone." title="Telefone">
+            <input type="email" v-model="Contact[1]" placeholder="Digite o e-mail." title="E-mail">
+            <input type="submit" value="Enviar">
+        </form>
+        <p>Nome Completo: {{ FullName }}</p>
+        <p>CPF: {{ CPF }}</p>
+        <p>Data de Nascimento: {{ DateOfBirth }}</p>
+        <p>Endereço: {{ Address }}</p>
+        <p>Telefone: {{ Contact[0] }}</p>
+        <p>E-mail: {{ Contact[1] }}</p>
+    </div>
+</body>
+</html>
